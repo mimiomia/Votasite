@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votasite</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Faça o seu voto</h1>
+
+        <div class="voting-area">
+            <div class="team-option">
+                <input type="radio" id="teamA" name="team" value="Time A">
+                <label for="teamA">Equipe A</label>
+            </div>
+            <div class="team-option">
+                <input type="radio" id="teamB" name="team" value="Time B">
+                <label for="teamB">Equipe B</label>
+            </div>
+            <input type="text" id="voterName" placeholder="Insira seu nome completo" required>
+            <button id="voteButton">Votar</button>
+        </div>
+
+        <button id="showResultsButton">Exibir resultados</button>
+
+        <div id="results" class="results-area" style="display: none;">
+            <h2>Resultados da Votação</h2>
+            <p><strong>Equipe A:</strong> <span id="teamAVotes">0</span> votos</p>
+            <p><strong>Equipe B:</strong> <span id="teamBVotes">0</span> votos</p>
+            <h3>Quem votou:</h3>
+            <ul id="voterList">
+            </ul>
+            <p id="winnerMessage"></p>
+            <button id="resetButton" style="background-color: #dc3545;">Reiniciar votação</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
